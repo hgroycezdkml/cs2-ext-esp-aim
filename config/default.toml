@@ -1,0 +1,21 @@
+[esp]
+enabled = true
+box = true
+health_bar = true
+skeleton = false
+max_distance = 5000.0
+team_filter = true
+
+[aim]
+enabled = true
+fov = 3.0
+smooth = 1.4
+bone = "head"
+key = "mouse5"
+
+[overlay]
+target_frame_ms = 7
+frame_budget_ms = 12
+width = 1920
+height = 1080
+click_through = true
