@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256">
+  <defs>
+    <radialGradient id="bgGlow" cx="50%" cy="48%" r="60%">
+      <stop offset="0%" stop-color="#0a0e12"/>
+      <stop offset="70%" stop-color="#0a0e12"/>
+      <stop offset="100%" stop-color="#0a0e12"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Dark tactical background -->
+  <rect width="256" height="256" fill="#0a0e12"/>
+
+  <!-- Outer angular HUD frame corners (stencil brackets) -->
+  <g fill="none" stroke="#c8d6e0" stroke-width="2" stroke-linecap="square">
+    <polyline points="24,64 24,24 64,24"/>
+    <polyline points="192,24 232,24 232,64"/>
+    <polyline points="232,192 232,232 192,232"/>
+    <polyline points="64,232 24,232 24,192"/>
+  </g>
+
+  <!-- Thin accent ticks at corners for HUD urgency -->
+  <g stroke="#ff3b2f" stroke-width="2" stroke-linecap="square">
+    <line x1="24" y1="72" x2="24" y2="88"/>
+    <line x1="232" y1="168" x2="232" y2="184"/>
+    <line x1="72" y1="24" x2="88" y2="24"/>
+    <line x1="168" y1="232" x2="184" y2="232"/>
+  </g>
+
+  <!-- Fractured crosshair reticle - 8 broken arms radiating from center -->
+  <!-- Each arm is a polygon: outer wide, inner narrow, with a gap at center -->
+
+  <!-- Top arm (fractured: offset left) -->
+  <polygon points="118,92 122,92 121,68 117,68" fill="#39ff88"/>
+  <polygon points="118,92 122,92 121,68 117,68" fill="#39ff88" opacity="0.4"/>
+
+  <!-- Top-right arm (longer, angular) -->
+  <polygon points="136,108 148,96 168,78 170,80 150,98 138,110" fill="#39ff88"/>
+  <line x1="148" y1="96" x2="160" y2="84" stroke="#39ff88" stroke-width="1.5"/>
+
+  <!-- Right arm (fractured gap, offset) -->
+  <polygon points="164,124 164,132 188,133 188,127" fill="#c8d6e0"/>
+
+  <!-- Bottom-right arm (phosphor red warning) -->
+  <polygon points="140,148 130,158 112,176 114,178 132,160 142,150" fill="#ff3b2f"/>
+  <line x1="130" y1="158" x2="118" y2="170" stroke="#ff3b2f" stroke-width="1.5"/>
+
+  <!-- Bottom arm (split, fractured) -->
+  <polygon points="118,164 122,164 121,188 117,188" fill="#39ff88"/>
+  <polygon points="134,164 138,164 137,184 133,184" fill="#39ff88" opacity="0.5"/>
+
+  <!-- Bottom-left arm (stencil broken) -->
+  <polygon points="108,148 96,160 78,178 80,180 98,162 110,150" fill="#c8d6e0"/>
+
+  <!-- Left arm (fractured) -->
+  <polygon points="92,124 92,132 68,131 68,125" fill="#39ff88"/>
+
+  <!-- Top-left arm (short, sharp) -->
+  <polygon points="108,108 96,96 78,80 80,78 98,94 110,106" fill="#ff3b2f"/>
+
+  <!-- Central eye-shaped aperture -->
+  <!-- Outer eye shape (almond/vesica) -->
+  <path d="M108,128 Q128,112 148,128 Q128,144 108,128 Z" fill="none" stroke="#c8d6e0" stroke-width="2"/>
+
+  <!-- Inner iris ring -->
+  <circle cx="128" cy="128" r="7" fill="none" stroke="#39ff88" stroke-width="2"/>
+
+  <!-- Pupil (predatory slit) -->
+  <ellipse cx="128" cy="128" rx="2.5" ry="5.5" fill="#ff3b2f"/>
+
+  <!-- Pupil highlight -->
+  <circle cx="129" cy="126" r="1" fill="#c8d6e0"/>
+
+  <!-- Glitch fracture lines across reticle -->
+  <g stroke="#39ff88" stroke-width="1" opacity="0.6">
+    <line x1="100" y1="120" x2="112" y2="126"/>
+    <line x1="144" y1="130" x2="156" y2="136"/>
+    <line x1="116" y1="140" x2="124" y2="148"/>
+  </g>
+
+  <!-- Small angular target markers on arms -->
+  <polygon points="117,68 123,68 120,62" fill="#ff3b2f"/>
+  <polygon points="188,127 188,133 194,130" fill="#ff3b2f"/>
+  <polygon points="117,188 123,188 120,194" fill="#ff3b2f"/>
+  <polygon points="68,125 68,131 62,128" fill="#ff3b2f"/>
+
+  <!-- Scanline HUD detail -->
+  <line x1="24" y1="200" x2="80" y2="200" stroke="#39ff88" stroke-width="1" opacity="0.4"/>
+  <line x1="176" y1="200" x2="232" y2="200" stroke="#39ff88" stroke-width="1" opacity="0.4"/>
+  <rect x="82" y="199" width="4" height="2" fill="#c8d6e0" opacity="0.6"/>
+  <rect x="170" y="199" width="4" height="2" fill="#c8d6e0" opacity="0.6"/>
+
+  <!-- Tiny wordmark -->
+  <text x="128" y="244" text-anchor="middle" font-family="monospace" font-size="7" fill="#c8d6e0" letter-spacing="3" opacity="0.5">CS2 // EXT ESP</text>
+</svg>
